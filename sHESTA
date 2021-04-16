@@ -1,0 +1,30 @@
+using System;
+
+namespace sHESTA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input your number: ");
+            double n = double.Parse(Console.ReadLine());
+            int cnt = 0;
+
+            for (double i = Math.Pow(10,n - 1) ; i < Math.Pow(10, n) ; i++)
+            {
+                for (int z = Convert.ToInt32(i); z > 1; z = z / 10)
+                {
+                    if (z % 2 == 0)
+                    {
+                        cnt++;
+                    }
+                }
+                if (cnt == n)
+                {
+                    Console.WriteLine(i);
+                }
+                cnt = 0;
+            }
+        }
+    }
+}
