@@ -1,0 +1,36 @@
+using System;
+
+namespace vTORA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input your first number: ");
+            int m = -1;
+            int n = 0;
+            int num = 0;
+
+            while (m < 0)
+            {
+                m = int.Parse(Console.ReadLine());
+            }
+            Console.Write("Input your second number: ");
+            while (n < m)
+            {
+                n = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = m; i <= n; i++)
+            {
+                for (int z = i; z > 1; z = z / 10)
+                {                    
+                    if (z % 10 == 5)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+        }
+    }
+}
