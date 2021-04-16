@@ -1,0 +1,28 @@
+using System;
+
+namespace sEDMA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input your first number: ");
+            int m = int.Parse(Console.ReadLine());
+            Console.Write("Input your second number: ");
+            int n = int.Parse(Console.ReadLine());
+            int cnt = 0;
+
+            for (double i = Math.Pow(10, 3); i < Math.Pow(10, 4); i++)
+            {
+                for (int z = 0; z < 1 ; z++)
+                {
+                    int num = Convert.ToInt32(i);
+                    if (num % n == 0 || num % m == 0)
+                    {
+                        Console.WriteLine(i);
+                    }                     
+                }                
+            }
+        }
+    }
+}
